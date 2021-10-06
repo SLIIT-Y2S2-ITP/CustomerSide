@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import GQ from '../../../images/footer-logo.png';
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import GQ from "../../../images/footer-logo.png";
 //import { Button } from './Button';
-import './NavBar.css';
-import Button from 'react-bootstrap/Button';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "./NavBar.css";
+import Button from "react-bootstrap/Button";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 //newly added
-import { Nav, NavDropdown } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../../../actions/customerActions';
+import { Nav, NavDropdown } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../../actions/customerActions";
 
 function NavBar() {
   /*newly added*/
@@ -20,7 +20,7 @@ function NavBar() {
 
   const logoutHandler = () => {
     dispatch(logout());
-    history.push('/');
+    history.push("/");
   };
 
   /*newly added*/
@@ -41,7 +41,7 @@ function NavBar() {
     }
   };
 
-  window.addEventListener('resize', showButton);
+  window.addEventListener("resize", showButton);
 
   const history = useHistory();
 
@@ -60,15 +60,15 @@ function NavBar() {
           </Link>
 
           <h3 className="gq-title">
-            GQ IN<span style={{ color: 'red' }}>TERNATIONAL</span>
+            GQ IN<span style={{ color: "red" }}>TERNATIONAL</span>
           </h3>
 
           <div className="menu-icon" onClick={handleclick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+            <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
 
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className="nav-item" style={{ backgroundColor: '#2f2d2d' }}>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
               <Link to="/" className="nav-links" onclick={closeMobileMenu}>
                 HOME
               </Link>
@@ -92,7 +92,7 @@ function NavBar() {
 
             <li className="nav-item">
               <Link
-                to="/SEARCH"
+                to="/aboutUs"
                 className="nav-links"
                 onclick={closeMobileMenu}
               >
@@ -104,14 +104,14 @@ function NavBar() {
           <Link
             class="btn-grad4"
             style={{
-              marginBottom: '10px',
-              borderRadius: '15px',
+              marginBottom: "10px",
+              borderRadius: "15px",
             }}
           >
-            <Link to="/login"> {customerInfo ? 'Profile' : 'login'}</Link>
+            <Link to="/login"> {customerInfo ? "Profile" : "login"}</Link>
           </Link>
 
-          <ul style={{ marginTop: '70px' }}>
+          <ul style={{ marginTop: "70px" }}>
             <li>
               <Nav>
                 <NavDropdown title={customerInfo?.name} id="basic-nav-dropdown">

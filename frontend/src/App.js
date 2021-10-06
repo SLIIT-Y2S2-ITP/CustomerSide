@@ -24,6 +24,7 @@ import ProfileScreen from "./components/Pages/Customer/ProfileScreen";
 import ItemHomeScreen from "./screens/ItemHomeScreen";
 import ItemScreen from "./screens/ItemScreen";
 import CartScreen from "./screens/CartScreen";
+import AboutUs from "./components/common/customerView/AboutUs";
 
 import ContactUs from "./components/modules/CustomerPageModules/ContactUs/ContactUsForm/mailer";
 
@@ -54,6 +55,9 @@ function App() {
           <Route exact path="/item/:id" component={ItemScreen}></Route>
 
           <Route exact path="/cart" component={CartScreen} />
+          <Route path="/aboutUs">
+            <AboutUs />
+          </Route>
 
           <Route path="/purchases">
             <SearchBar setSearch={setSearch} />

@@ -11,6 +11,6 @@ const router = express.Router();
 
 router.route("/").post(registerCustomer);
 router.route("/login").post(authCustomer);
-router.route("/api/profile").post(protect, updateCustomerProfile);
+router.route("/profile").post(protect, updateCustomerProfile);
 
 module.exports = router;
