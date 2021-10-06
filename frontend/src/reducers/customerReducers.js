@@ -10,6 +10,8 @@ import {
   CUSTOMER_UPDATE_REQUEST,
   CUSTOMER_UPDATE_SUCCESS,
 } from "../constants/customerConstants";
+
+//=========================================================
 export const customerLoginReducer = (state = {}, action) => {
   switch (action.type) {
     case CUSTOMER_LOGIN_REQUEST:
@@ -25,6 +27,7 @@ export const customerLoginReducer = (state = {}, action) => {
   }
 };
 
+//============================================================
 export const customerRegisterReducer = (state = {}, action) => {
   switch (action.type) {
     case CUSTOMER_REGISTER_REQUEST:
@@ -38,6 +41,7 @@ export const customerRegisterReducer = (state = {}, action) => {
   }
 };
 
+//================================================================
 export const customerUpdateReducer = (state = {}, action) => {
   switch (action.type) {
     case CUSTOMER_UPDATE_REQUEST:

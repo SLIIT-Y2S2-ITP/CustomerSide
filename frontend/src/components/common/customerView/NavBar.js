@@ -68,7 +68,7 @@ function NavBar() {
           </div>
 
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className="nav-item">
+            <li className="nav-item" style={{ backgroundColor: '#2f2d2d' }}>
               <Link to="/" className="nav-links" onclick={closeMobileMenu}>
                 HOME
               </Link>
@@ -92,7 +92,7 @@ function NavBar() {
 
             <li className="nav-item">
               <Link
-                to="/aboutUs"
+                to="/SEARCH"
                 className="nav-links"
                 onclick={closeMobileMenu}
               >
@@ -106,8 +106,6 @@ function NavBar() {
             style={{
               marginBottom: '10px',
               borderRadius: '15px',
-              width:'120px',
-              height:'30px'
             }}
           >
             <Link to="/login"> {customerInfo ? 'Profile' : 'login'}</Link>

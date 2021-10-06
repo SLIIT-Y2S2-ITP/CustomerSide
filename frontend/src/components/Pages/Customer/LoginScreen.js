@@ -67,16 +67,6 @@ const LoginScreen = () => {
             New Customer ? <Link to="/register">Register Here</Link>
           </Col>
         </Row>
-
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <Button variant="primary" href="/Adminlogin">
-          Admin login
-        </Button>
       </div>
     </MainScreen>
   );

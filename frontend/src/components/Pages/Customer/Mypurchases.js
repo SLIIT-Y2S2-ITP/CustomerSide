@@ -61,15 +61,26 @@ const Mypurchases = ({ search }) => {
   function pdfGenerate(title, category, content, updatedAt) {
     var doc = new jsPDF("landscape", "px", "a4", "false");
     doc.setFont("Helvertica", "bold");
-    doc.text(60, 60, "Title :");
-    doc.text(60, 80, "Category :");
-    doc.text(60, 100, "Content :");
-    doc.text(60, 120, "Purchased on :");
+    doc.setFontSize(20);
+    doc.text(250, 30, "GQ INTERNATIONAL");
+    doc.setFontSize(16);
+    doc.text(244, 50, "Specialist in Auto Door Handles");
+    doc.setFontSize(15);
+    doc.text(265, 70, "contactgqintl@gmail.com");
+    doc.setFontSize(14);
+    doc.text(500, 90, "Tel: 072-7788877");
+    doc.line(20, 100, 600, 100);
+    doc.setFont("Helvertica", "bold");
+    doc.text(60, 130, "Title :");
+    doc.text(60, 150, "Category :");
+    doc.text(60, 170, "Content :");
+    doc.text(60, 190, "Purchased on :");
     doc.setFont("Helvertica", "normal");
-    doc.text(100, 60, title);
-    doc.text(140, 80, category);
-    doc.text(120, 100, content);
-    doc.text(160, 120, updatedAt.substring(0, 10));
+    doc.text(100, 130, title);
+    doc.text(110, 150, category);
+    doc.text(110, 170, content);
+    doc.text(130, 190, updatedAt.substring(0, 10));
+    doc.line(20, 270, 600, 270);
     doc.save("purchase.pdf");
   }
 
@@ -99,7 +110,7 @@ const Mypurchases = ({ search }) => {
         .map((purchase) => (
           <Accordion key={purchase._id} id="content">
             <Card style={{ margin: 10 }}>
-              <Card.Header style={{ background: "#94505E", display: "flex" }}>
+              <Card.Header style={{ background: "#D3D3D3", display: "flex" }}>
                 <span
                   style={{
                     color: "black",
@@ -136,10 +147,10 @@ const Mypurchases = ({ search }) => {
                   </Button>
                 </div>
               </Card.Header>
-              <Card.Body style={{ background: "#EDADBA" }}>
+              <Card.Body style={{ background: "#FFF" }}>
                 <h6 style={{ color: "green" }}>{purchase.content}</h6>
               </Card.Body>
-              <Card.Body style={{ background: "#EDADBA" }}>
+              <Card.Body style={{ background: "#FFF" }}>
                 <h4>
                   <Badge variant="success">
                     Category - {purchase.category}

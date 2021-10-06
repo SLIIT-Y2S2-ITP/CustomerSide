@@ -1,14 +1,13 @@
 .item{
     width: 300px;
     padding: 1rem;
-    background-color:rgba(255, 255, 255, 0.7);
-    box-shadow: 0 1px 4px rgba(8, 1, 1, 0.904);
+    background: #f4f4f4;
+    box-shadow: 0 1px 4px (rgba(8, 1, 1, 0.904));
     border: black;
     margin: 8px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 .item > img{
