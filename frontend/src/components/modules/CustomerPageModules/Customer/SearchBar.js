@@ -19,6 +19,7 @@ const Search = ({ setSearch }) => {
           <Nav className="m-auto">
             <Form inline>
               <FormControl
+                style={{ width: "250px" }}
                 type="text"
                 placeholder="Search"
                 className="mr-sm-2"

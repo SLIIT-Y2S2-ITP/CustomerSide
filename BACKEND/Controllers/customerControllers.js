@@ -2,6 +2,7 @@ const asyncHandler = require("express-async-handler");
 const Customer = require("../models/customerModel");
 const generateToken = require("../utils/generateToken");
 
+//========================================================
 const registerCustomer = asyncHandler(async (req, res) => {
   const { name, email, password, pic } = req.body;
 
@@ -36,7 +37,7 @@ const registerCustomer = asyncHandler(async (req, res) => {
     throw new Error("Error occured!");
   }
 });
-
+//=====================================================
 const authCustomer = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
@@ -59,6 +60,7 @@ const authCustomer = asyncHandler(async (req, res) => {
   }
 });
 
+//===========================================================
 const updateCustomerProfile = asyncHandler(async (req, res) => {
   const customer = await Customer.findById(req.customer._id);
 

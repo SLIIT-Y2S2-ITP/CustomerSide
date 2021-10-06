@@ -24,6 +24,7 @@ const MainScreen = ({ title, children }) => {
                 <h1 className="heading" style={{ color: "red" }}>
                   {title}
                 </h1>
+
                 <hr />
               </>
             )}

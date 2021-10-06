@@ -169,15 +169,10 @@
 }
 
 .btn-grad4 {
-  background-image: linear-gradient(
-    to right,
-    #7b4397 0%,
-    #dc2430 51%,
-    #7b4397 100%
-  );
+  background-image: linear-gradient(to right, grey 0%, red 51%, grey 100%);
 }
 .btn-grad4 {
-  width: 90px;
+  width: 95px;
   height: 30px;
   text-align: center;
   text-decoration: none;

@@ -43,7 +43,7 @@ const ProfileScreen = () => {
   };
 
   return (
-    <MainScreen title="EDIT PROFILE">
+    <MainScreen title="PROFILE">
       <div>
         <Row className="profileContainer">
           <Col md={6}>
